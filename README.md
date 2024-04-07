@@ -30,6 +30,9 @@
 ## 使用(USE)
 1. 下载Autojs 4.x版本
 2. 连接服务端，地址 <ip>:9317
+3. node 版本16.x
+4. mysql 连接失败
+    - ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'password';  其中password 要替换为自己数据库的密码
 
 
 ## image

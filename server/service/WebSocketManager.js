@@ -85,7 +85,6 @@ class WebSocketManager extends events_1.EventEmitter {
             client.ip = client.ip.replace(/[^0-9\.]/ig, '');
             logger.info('WebSocket.Server connection client ip -> ' + client.ip + ' url -> ' + req.url);
             client.addListener('close', (code, message) => {
-                console.log('\n\nclose>>>>');
                 logger.info('WebSocket.Client close ip -> ' + client.ip + ' code -> ' + code + ' message-> ' + message);
                 clientStatusChangeListeners.forEach((listener) => {
                     listener(client, 'close');
@@ -116,7 +115,6 @@ class WebSocketManager extends events_1.EventEmitter {
             });
             client.isAlive = true;
             client.addEventListener('pong', () => {
-                console.log('pong');
                 client.isAlive = true;
             });
             logger.info('WebSocket.Client open ip -> ' + client.ip);

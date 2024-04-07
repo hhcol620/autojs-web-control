@@ -16,6 +16,22 @@ Date: 2019-12-05 17:21:30
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
+-- Table structure for t_admin
+-- ----------------------------
+DROP TABLE IF EXISTS `t_admin`;
+CREATE TABLE `t_admin` (
+  `admin_id` int(11) NOT NULL,
+  `uname` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `t_admin` VALUES (1, 'admin', 'admin11');
+
+-- ----------------------------
+-- Records of t_admin
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for t_device
 -- ----------------------------
 DROP TABLE IF EXISTS `t_device`;
